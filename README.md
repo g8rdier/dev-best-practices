@@ -7,10 +7,24 @@ Open source under the [MIT License](LICENSE).
 ---
 
 ## Table of Contents
-1. [Guiding Principle](#guiding-principle-keep-it-clean-and-simple)
-2. [Git Workflow](#git-workflow)
-3. [Commit Message Conventions](#commit-message-conventions)
-4. [AI-Assisted Development](#ai-assisted-development)
+1. [Language](#language)
+2. [Guiding Principle](#guiding-principle-keep-it-clean-and-simple)
+3. [Git Workflow](#git-workflow)
+4. [Commit Message Conventions](#commit-message-conventions)
+5. [AI-Assisted Development](#ai-assisted-development)
+
+---
+
+## Language
+
+All project communication must be in **English** — this includes:
+
+*   README and documentation
+*   Commit messages and PR titles/descriptions
+*   Code comments and inline documentation
+*   Issue titles and comments
+
+*   **Why?** English is the lingua franca of software development. Keeping everything in one language ensures the history is readable by any contributor or reviewer, regardless of background.
 
 ---
 
