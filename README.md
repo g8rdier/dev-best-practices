@@ -70,7 +70,8 @@ Changes to `main` should go through a pull request. Direct commits to `main` cre
 
 *   **One PR Per Feature Branch:** Each feature branch addresses a single, specific purpose and results in exactly one pull request.
 *   **PR Title Format:** The PR title must follow the same conventional commit format as the resulting squash merge commit (e.g. `feat: Add user authentication`). The PR number is appended automatically during merge.
-*   **Why?** Keeps PR titles consistent with commit history, making both readable in the same way.
+*   **Test Plan:** PRs that change code behaviour must include a test plan — a markdown checklist of steps to verify the change works as expected. Check off each item before merging. Pure documentation or configuration changes do not require a test plan.
+*   **Why?** Ensures code changes are explicitly verified before reaching `main`, reducing the risk of regressions.
 
 ### 4. Squash Merge Policy
 
