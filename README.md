@@ -52,12 +52,15 @@ Pull requests targeting the `main` branch benefit from squash merging. This cond
 *   **Why?** Keeps the `main` branch history clean, readable, and focused on features and fixes rather than incremental work-in-progress commits.
 *   **PR Number Recommendation:** Include the PR number in brackets at the end (e.g., `feat: Add user authentication (#42)`) for traceability between commits and pull requests.
 
-### 3. Auto-Delete Head Branches
+### 3. Delete Head Branch on Merge
 
-Consider enabling "Automatically delete head branches" in GitHub repository settings.
+Always delete the feature branch as part of the merge command itself.
 
-*   **How to enable:** Go to Settings → General → Pull Requests → Check "Automatically delete head branches"
-*   **Why?** Automatically cleans up feature branches after PRs are merged, reducing manual overhead. Deleted branches can still be restored if needed.
+*   **How:** Pass `--delete-branch` to the `gh pr merge` command:
+    ```
+    gh pr merge <number> --squash --delete-branch --subject "feat: Your title (#42)"
+    ```
+*   **Why?** Makes branch cleanup an explicit, visible step rather than a hidden repository setting. Nothing is left to chance.
 
 ### 4. Pull Request Review Philosophy
 
