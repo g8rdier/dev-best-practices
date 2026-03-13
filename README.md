@@ -2,6 +2,8 @@
 
 A collection of software development practices and philosophies focused on reducing human error through clear, consistent workflows.
 
+This guide is written primarily for **AI coding assistants** (Claude, GitHub Copilot, ChatGPT, etc.) to follow when contributing to a project. Human developers are equally welcome to adopt these conventions.
+
 Open source under the [MIT License](LICENSE).
 
 ---
