@@ -63,7 +63,8 @@ Feature branches must be named using the same type prefix as the conventional co
 Changes to `main` should go through a pull request. Direct commits to `main` create a messy history.
 
 *   **One PR Per Feature Branch:** Each feature branch addresses a single, specific purpose and results in exactly one pull request.
-*   **Why?** This maintains a clear history of what was changed and why.
+*   **PR Title Format:** The PR title must follow the same conventional commit format as the resulting squash merge commit (e.g. `feat: Add user authentication`). The PR number is appended automatically during merge.
+*   **Why?** Keeps PR titles consistent with commit history, making both readable in the same way.
 
 ### 3. Squash Merge Policy
 
