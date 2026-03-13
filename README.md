@@ -54,6 +54,12 @@ Pull requests targeting the `main` branch benefit from squash merging. This cond
 *   **Why?** Keeps the `main` branch history clean, readable, and focused on features and fixes rather than incremental work-in-progress commits.
 *   **PR Number Recommendation:** Include the PR number in brackets at the end (e.g., `feat: Add user authentication (#42)`) for traceability between commits and pull requests.
 
+#### Exception: Experiment and Research Branches
+
+Branches used for experiments, research, or exploratory work should use a **regular merge** (not squash).
+
+*   **Why?** The individual commits in an experiment tell the story of what was tried and why. Squashing that history into one commit loses the scientific trail. The spirit of the rule — keep `main` clean and understandable — is what matters, not the mechanism.
+
 ### 3. Delete Head Branch on Merge
 
 Always delete the feature branch as part of the merge command itself.
