@@ -58,7 +58,13 @@ Feature branches must be named using the same type prefix as the conventional co
 *   **Types:** Use the same prefixes as commit types — `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 *   **Why?** Makes the purpose of a branch immediately clear from its name, and keeps branch names consistent with commit history.
 
-### 2. Pull Request Requirements
+### 2. No Direct Commits to Main
+
+Never commit directly to `main`. All changes must go through a feature branch and a pull request.
+
+*   **Why?** Direct commits bypass review, break the linear squash-merge history, and make it impossible to associate changes with a PR number.
+
+### 3. Pull Request Requirements
 
 Changes to `main` should go through a pull request. Direct commits to `main` create a messy history.
 
@@ -66,7 +72,7 @@ Changes to `main` should go through a pull request. Direct commits to `main` cre
 *   **PR Title Format:** The PR title must follow the same conventional commit format as the resulting squash merge commit (e.g. `feat: Add user authentication`). The PR number is appended automatically during merge.
 *   **Why?** Keeps PR titles consistent with commit history, making both readable in the same way.
 
-### 3. Squash Merge Policy
+### 4. Squash Merge Policy
 
 Pull requests targeting the `main` branch benefit from squash merging. This condenses the feature's entire commit history into a single, meaningful commit on the `main` branch.
 
@@ -79,7 +85,7 @@ Branches used for experiments, research, or exploratory work should use a **regu
 
 *   **Why?** The individual commits in an experiment tell the story of what was tried and why. Squashing that history into one commit loses the scientific trail. The spirit of the rule — keep `main` clean and understandable — is what matters, not the mechanism.
 
-### 4. Delete Head Branch on Merge
+### 5. Delete Head Branch on Merge
 
 Always delete the feature branch as part of the merge command itself.
 
@@ -89,7 +95,7 @@ Always delete the feature branch as part of the merge command itself.
     ```
 *   **Why?** Makes branch cleanup an explicit, visible step rather than a hidden repository setting. Nothing is left to chance.
 
-### 5. Pull Request Review Philosophy
+### 6. Pull Request Review Philosophy
 
 Most changes can be self-reviewed and merged by the author. However, certain changes benefit from explicit stakeholder approval.
 
