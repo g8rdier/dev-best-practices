@@ -50,14 +50,22 @@ Reduce complexity and increase clarity. A clean `main` branch, understandable co
 
 A workflow designed to maintain a clean and linear project history in the `main` branch.
 
-### 1. Pull Request Requirements
+### 1. Branch Naming Convention
+
+Feature branches must be named using the same type prefix as the conventional commit that will result from the PR, followed by a short kebab-case description.
+
+*   **Format:** `<type>/<short-description>` (e.g. `feat/user-auth`, `fix/login-bug`, `docs/api-guide`)
+*   **Types:** Use the same prefixes as commit types — `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+*   **Why?** Makes the purpose of a branch immediately clear from its name, and keeps branch names consistent with commit history.
+
+### 2. Pull Request Requirements
 
 Changes to `main` should go through a pull request. Direct commits to `main` create a messy history.
 
 *   **One PR Per Feature Branch:** Each feature branch addresses a single, specific purpose and results in exactly one pull request.
 *   **Why?** This maintains a clear history of what was changed and why.
 
-### 2. Squash Merge Policy
+### 3. Squash Merge Policy
 
 Pull requests targeting the `main` branch benefit from squash merging. This condenses the feature's entire commit history into a single, meaningful commit on the `main` branch.
 
@@ -70,7 +78,7 @@ Branches used for experiments, research, or exploratory work should use a **regu
 
 *   **Why?** The individual commits in an experiment tell the story of what was tried and why. Squashing that history into one commit loses the scientific trail. The spirit of the rule — keep `main` clean and understandable — is what matters, not the mechanism.
 
-### 3. Delete Head Branch on Merge
+### 4. Delete Head Branch on Merge
 
 Always delete the feature branch as part of the merge command itself.
 
@@ -80,7 +88,7 @@ Always delete the feature branch as part of the merge command itself.
     ```
 *   **Why?** Makes branch cleanup an explicit, visible step rather than a hidden repository setting. Nothing is left to chance.
 
-### 4. Pull Request Review Philosophy
+### 5. Pull Request Review Philosophy
 
 Most changes can be self-reviewed and merged by the author. However, certain changes benefit from explicit stakeholder approval.
 
