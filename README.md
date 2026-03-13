@@ -10,10 +10,11 @@ Open source under the [MIT License](LICENSE).
 
 ## Table of Contents
 1. [Language](#language)
-2. [Guiding Principle](#guiding-principle-keep-it-clean-and-simple)
-3. [Git Workflow](#git-workflow)
-4. [Commit Message Conventions](#commit-message-conventions)
-5. [AI-Assisted Development](#ai-assisted-development)
+2. [Default Branch Naming](#default-branch-naming)
+3. [Guiding Principle](#guiding-principle-keep-it-clean-and-simple)
+4. [Git Workflow](#git-workflow)
+5. [Commit Message Conventions](#commit-message-conventions)
+6. [AI-Assisted Development](#ai-assisted-development)
 
 ---
 
@@ -27,6 +28,15 @@ All project communication must be in **English** — this includes:
 *   Issue titles and comments
 
 *   **Why?** English is the lingua franca of software development. Keeping everything in one language ensures the history is readable by any contributor or reviewer, regardless of background.
+
+---
+
+## Default Branch Naming
+
+Always name the default branch **`main`**.
+
+*   **How:** When creating a new repository, set the default branch to `main`. For existing repositories using `master`, rename it via GitHub Settings → Branches → Rename.
+*   **Why?** `main` is the modern standard. Consistent naming across all repositories reduces confusion and makes tooling and documentation universally applicable.
 
 ---
 
