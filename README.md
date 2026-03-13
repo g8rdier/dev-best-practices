@@ -58,13 +58,20 @@ Feature branches must be named using the same type prefix as the conventional co
 *   **Types:** Use the same prefixes as commit types — `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 *   **Why?** Makes the purpose of a branch immediately clear from its name, and keeps branch names consistent with commit history.
 
-### 2. No Direct Commits to Main
+### 2. Issue-First Workflow
+
+Every change should start with a GitHub issue before a branch is opened.
+
+*   **Why?** Issues provide context for why a change is being made, create a reference point for discussion, and ensure the work is intentional. A branch without an issue has no traceable motivation.
+*   **Exception:** Trivial fixes (typos, obvious broken links) may skip the issue and go directly to a branch and PR.
+
+### 3. No Direct Commits to Main
 
 Never commit directly to `main`. All changes must go through a feature branch and a pull request.
 
 *   **Why?** Direct commits bypass review, break the linear squash-merge history, and make it impossible to associate changes with a PR number.
 
-### 3. Pull Request Requirements
+### 4. Pull Request Requirements
 
 Changes to `main` should go through a pull request. Direct commits to `main` create a messy history.
 
@@ -73,7 +80,7 @@ Changes to `main` should go through a pull request. Direct commits to `main` cre
 *   **Test Plan:** PRs that change code behaviour must include a test plan — a markdown checklist of steps to verify the change works as expected. Check off each item before merging. Pure documentation or configuration changes do not require a test plan.
 *   **Why?** Ensures code changes are explicitly verified before reaching `main`, reducing the risk of regressions.
 
-### 4. Squash Merge Policy
+### 5. Squash Merge Policy
 
 Pull requests targeting the `main` branch benefit from squash merging. This condenses the feature's entire commit history into a single, meaningful commit on the `main` branch.
 
@@ -86,7 +93,7 @@ Branches used for experiments, research, or exploratory work should use a **regu
 
 *   **Why?** The individual commits in an experiment tell the story of what was tried and why. Squashing that history into one commit loses the scientific trail. The spirit of the rule — keep `main` clean and understandable — is what matters, not the mechanism.
 
-### 5. Delete Head Branch on Merge
+### 6. Delete Head Branch on Merge
 
 Always delete the feature branch as part of the merge command itself.
 
@@ -96,7 +103,7 @@ Always delete the feature branch as part of the merge command itself.
     ```
 *   **Why?** Makes branch cleanup an explicit, visible step rather than a hidden repository setting. Nothing is left to chance.
 
-### 6. Pull Request Review Philosophy
+### 7. Pull Request Review Philosophy
 
 Most changes can be self-reviewed and merged by the author. However, certain changes benefit from explicit stakeholder approval.
 
